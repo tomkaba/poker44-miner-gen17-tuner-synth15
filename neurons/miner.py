@@ -132,7 +132,7 @@ class Miner(BaseMinerNeuron):
                 repo_root / "poker44" / "validator" / "synapse.py",
             ],
             defaults={
-                "model_name": "poker44_gen17_tuner_synth15",
+                "model_name": "poker44-gen17-tuner-synth15",
                 "model_version": "gen17-synth15-overlay-tuner-fit999",
                 "framework": "python-local-synth",
                 "license": "MIT",
