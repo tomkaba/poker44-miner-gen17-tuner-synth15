@@ -60,7 +60,7 @@ for key in ['pf_penalty_artifact_dir', 'pf_boost_artifact_dir', 'post_penalty_ar
     if value:
         path = Path(value)
         if not path.is_absolute():
-      path = base_root / path
+            path = base_root / path
         model_path = path / 'model.json'
         if not model_path.is_file():
             missing.append(str(model_path.relative_to(repo)))

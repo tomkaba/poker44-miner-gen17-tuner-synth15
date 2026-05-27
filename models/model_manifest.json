@@ -6,7 +6,7 @@
     "framework": "python-local-synth",
     "license": "MIT",
     "repo_url": "https://github.com/tomkaba/poker44-miner-gen17-tuner-synth15",
-    "repo_commit": "231aca2f4135a034e9387b33eee21ee92c168cde",
+    "repo_commit": "a829d500fe66d5c5c1f9aa3cbbbddbc7d66179e4",
     "inference_mode": "local",
     "training_data_statement": "Uses the gen17_synth15 base synth artifact with a recall-biased overlay tuner fitted on labeled public benchmark chunks.",
     "data_attestation": "This artifact combines benchmark-derived frozen synth artifacts with an overlay tuner fitted on public benchmark labels.",
