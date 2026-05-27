@@ -52,6 +52,7 @@ missing_optional="$($VENV_BIN/python - <<'PY'
 import json
 from pathlib import Path
 repo = Path.cwd()
+base_root = repo / 'models'
 config = json.loads((repo / 'models' / 'base_runtime' / 'synth_manifest.json').read_text(encoding='utf-8'))
 missing = []
 for key in ['pf_penalty_artifact_dir', 'pf_boost_artifact_dir', 'post_penalty_artifact_dir', 'post_boost_artifact_dir']:
@@ -59,7 +60,7 @@ for key in ['pf_penalty_artifact_dir', 'pf_boost_artifact_dir', 'post_penalty_ar
     if value:
         path = Path(value)
         if not path.is_absolute():
-            path = repo / path
+      path = base_root / path
         model_path = path / 'model.json'
         if not model_path.is_file():
             missing.append(str(model_path.relative_to(repo)))
